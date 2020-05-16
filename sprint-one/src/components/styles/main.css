@@ -42,14 +42,41 @@ body {
 .header {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  height: 10.5rem;
   padding: 0.5rem 1rem 1rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .header {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    padding: 1rem 1.5rem;
+    height: 5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header {
+    padding: 1rem 11.25rem;
+  }
 }
 
 .header__logo {
   width: 50%;
   height: 2rem;
   margin: 0 0 0.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .header__logo {
+    margin: 0 10.5rem 0 0;
+    width: 66%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header__logo {
+    margin: 0 31.8rem 0 0;
+  }
 }
 
 .header__input {
@@ -69,6 +96,18 @@ body {
   border: 2px solid #0095ff;
 }
 
+@media (min-width: 768px) {
+  .header__input {
+    margin: 0 1.5rem 0 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header__input {
+    width: 120%;
+  }
+}
+
 .header__nav {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -83,6 +122,12 @@ body {
   margin: 0.5rem 0 0 0;
 }
 
+@media (min-width: 768px) {
+  .header__nav {
+    margin: 0;
+  }
+}
+
 .header__btn {
   color: #fafafa;
   background-color: #0095ff;
@@ -92,6 +137,7 @@ body {
   font-size: 1rem;
   border-radius: 4px;
   border: 1px solid #fafafa;
+  max-width: 14.25rem;
   width: 80%;
   outline: none;
   height: 3rem;
@@ -103,6 +149,13 @@ body {
 
 .header__btn:active {
   background-color: #0065ad;
+}
+
+@media (min-width: 768px) {
+  .header__btn {
+    width: unset;
+    padding: 0.5rem 1rem;
+  }
 }
 
 .header__user-icon {
