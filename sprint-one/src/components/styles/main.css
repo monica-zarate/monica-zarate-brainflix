@@ -338,10 +338,39 @@ body {
   padding: 2rem 1rem 1.5rem 1rem;
 }
 
+@media (min-width: 768px) {
+  .description {
+    padding: 3rem 1.5rem 1.5rem 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 1440px) {
+  .description {
+    padding: 2.5rem 0 1.5rem 0;
+    margin: 0 0 0 11.25rem;
+    width: 44.5rem;
+  }
+}
+
 .description__title {
   font-family: "Avenir Next Bold";
   font-size: 1.5rem;
   margin: 0 0 1rem 0;
+}
+
+@media (min-width: 768px) {
+  .description__title {
+    font-size: 2.25rem;
+    margin: 0 0 1.5rem 0;
+  }
 }
 
 .description__details {
@@ -349,6 +378,16 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin: 0 0 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .description__details {
+    font-size: 0.95rem;
+    margin: 0;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
 }
 
 .description__details--author {
@@ -366,6 +405,21 @@ body {
   display: flex;
 }
 
+@media (min-width: 768px) {
+  .description__icons {
+    font-size: 0.75rem;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+@media (min-width: 1440px) {
+  .description__icons {
+    font-size: 1rem;
+  }
+}
+
 .description__icons--views, .description__icons--likes {
   margin: 0 0.5rem 0 0;
 }
@@ -380,8 +434,36 @@ body {
   border-top: 1px solid #afafaf;
 }
 
+@media (min-width: 768px) {
+  .description__text-wrapper {
+    padding: 2.5rem 0 4rem 0;
+    margin: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .description__text-wrapper {
+    padding: 2.5rem 0;
+    margin: 0 11.25rem;
+    width: 44.5rem;
+  }
+}
+
 .description__text-content {
   font-size: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .description__text-content {
+    width: 75%;
+    font-size: 0.92rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .description__text-content {
+    width: 78%;
+  }
 }
 
 @font-face {

@@ -1,5 +1,7 @@
 // Video Section
 
+// Currently Playing Video
+
 .video {
   background-color: $btn-hover;
 
@@ -138,18 +140,47 @@
   }
 }
 
+// Video Description
+
 .description {
   padding: 2rem 1rem 1.5rem 1rem;
+
+  @include tablet {
+    padding: 3rem 1.5rem 1.5rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @include desktop {
+    padding: 2.5rem 0 1.5rem 0;
+    margin: 0 0 0 11.25rem;
+    width: 44.5rem;
+  }
 
   &__title {
     font-family: $primary-font-bold;
     font-size: 1.5rem;
     margin: 0 0 1rem 0;
+
+    @include tablet {
+      font-size: 2.25rem;
+      margin: 0 0 1.5rem 0;
+    }
+
+    @include desktop {
+    }
   }
 
   &__details {
     display: flex;
     margin: 0 0 2rem 0;
+
+    @include tablet {
+      font-size: 0.95rem;
+      margin: 0;
+      align-items: flex-end;
+    }
 
     &--author {
       font-family: $primary-font-demi;
@@ -162,6 +193,15 @@
 
   &__icons {
     display: flex;
+
+    @include tablet {
+      font-size: 0.75rem;
+      align-items: flex-end;
+    }
+
+    @include desktop {
+      font-size: 1rem;
+    }
 
     &--views,
     &--likes {
@@ -177,9 +217,29 @@
     padding: 1.5rem 0 2.5rem 0;
     margin: 0 1rem;
     border-top: 1px solid $divider-color;
+
+    @include tablet {
+      padding: 2.5rem 0 4rem 0;
+      margin: 0 1.5rem;
+    }
+
+    @include desktop {
+      padding: 2.5rem 0;
+      margin: 0 11.25rem;
+      width: 44.5rem;
+    }
   }
 
   &__text-content {
     font-size: 0.75rem;
+
+    @include tablet {
+      width: 75%;
+      font-size: 0.92rem;
+    }
+
+    @include desktop {
+      width: 78%;
+    }
   }
 }
