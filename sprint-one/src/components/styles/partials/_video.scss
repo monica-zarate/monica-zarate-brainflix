@@ -1,37 +1,139 @@
 // Video Section
 
 .video {
-  background-image: url("../../assets/images/video-list-0.jpg");
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 11.5rem;
+  background-color: $btn-hover;
+
+  @include tablet {
+    height: 25rem;
+    padding: 0 2rem;
+  }
+
+  @include desktop {
+    height: 33.75rem;
+    padding: 0 15.5rem;
+  }
+
+  &__playing {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    background-image: url("../../assets/images/video-list-0.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 11.5rem;
+
+    @include tablet {
+      height: 25rem;
+    }
+
+    @include desktop {
+      height: 33.75rem;
+    }
+  }
 
   &__icons {
+    padding: 0 1rem 0.5rem 1rem;
+    width: 100%;
     display: flex;
-    background-color: $hero-gradient;
-    justify-content: space-around;
-    height: 3rem;
+    justify-content: center;
+
+    @include tablet {
+      padding: 0 0.5rem 1rem 0.5rem;
+    }
+
+    @include desktop {
+      padding: 0 1rem 1rem 1rem;
+    }
+
+    &--play,
+    &--time,
+    &--screen,
+    &--vol {
+      background-color: $hero-gradient;
+      border: none;
+      height: 2.5rem;
+      border-radius: 4px;
+    }
 
     &--play {
       background-image: url("../../assets/icons/icon-play.svg");
       background-position: center;
-      background-size: cover;
+      background-repeat: no-repeat;
+      width: 4rem;
+      margin: 0 0.5rem 0 0;
+
+      @include tablet {
+        margin: 0 1rem 0 0;
+        width: 5rem;
+      }
     }
 
     &--time {
+      width: 44%;
+      margin: 0 0.5rem 0 0;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        border-top: 2.5px groove $btn-hover;
+        border-bottom: 2.5px groove $btn-hover;
+        border-radius: 4px;
+        top: 1.1rem;
+        left: 1rem;
+        width: 75%;
+        content: "";
+
+        @include tablet {
+          width: 83%;
+        }
+
+        @include desktop {
+          width: 88%;
+        }
+      }
+
+      @include tablet {
+        width: 100%;
+        margin: 0 1rem 0 0;
+      }
+    }
+
+    &--timer {
+      display: none;
+
+      @include tablet {
+        display: inline;
+        position: absolute;
+        color: $secondary-color;
+        font-size: 0.5rem;
+        top: 0.75rem;
+        right: 1rem;
+      }
     }
 
     &--screen {
       background-image: url("../../assets/icons/icon-fullscreen.svg");
       background-position: center;
-      background-size: cover;
+      background-repeat: no-repeat;
+      width: 2.5rem;
+      border-radius: 4px 0 0 4px;
+
+      @include tablet {
+        width: 3.5rem;
+      }
     }
 
     &--vol {
       background-image: url("../../assets/icons/icon-volume.svg");
       background-position: center;
-      background-size: cover;
+      background-repeat: no-repeat;
+      width: 2.5rem;
+      border-radius: 0 4px 4px 0;
+
+      @include tablet {
+        width: 3.5rem;
+      }
     }
   }
 }

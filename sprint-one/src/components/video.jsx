@@ -8,11 +8,15 @@ function Video(props) {
   return (
     <>
       <div className="video">
-        <div className="video__icons">
-          <button className="video__icons--play"></button>
-          <button className="video__icons--time"></button>
-          <button className="video__icons--screen"></button>
-          <button className="video__icons--vol"></button>
+        <div className="video__playing">
+          <div className="video__icons">
+            <button className="video__icons--play"></button>
+            <button className="video__icons--time">
+              <span className="video__icons--timer">0:00 / 0:42</span>
+            </button>
+            <button className="video__icons--screen"></button>
+            <button className="video__icons--vol"></button>
+          </div>
         </div>
       </div>
       <div className="description">
