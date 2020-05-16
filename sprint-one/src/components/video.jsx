@@ -1,8 +1,10 @@
 import React from "react";
 import "./styles/main.css";
-import video_preview from "../assets/images/video-list-0.jpg";
+import play from "../assets/icons/icon-play.svg";
+import views from "../assets/icons/icon-views.svg";
+import likes from "../assets/icons/icon-likes.svg";
 
-function Video() {
+function Video(props) {
   return (
     <>
       <div className="video">
@@ -14,23 +16,29 @@ function Video() {
         </div>
       </div>
       <div className="description">
-        <h1 className="description__title">BMX Rampage: 2018 Highlights</h1>
-        <p className="description__author">By Red Cow</p>
-        <p className="description__date">12/18/2018</p>
-        <img className="description__views-icon" src="" alt="" />
-        <span className="description__views-num">1,001,023</span>
-        <img className="description__likes-icon" src="" alt="" />
-        <span className="description__likes-num">110,985</span>
+        <h1 className="description__title">{props.currentVideo.title}</h1>
+        <div className="description__details">
+          <p className="description__details--author">
+            {props.currentVideo.user}
+          </p>
+          <p className="description__details--date">
+            {props.currentVideo.timestamp}
+          </p>
+        </div>
+        <div className="description__icons">
+          <img className="description__icons--views" src={views} alt="" />
+          <span className="description__icons--num">
+            {props.currentVideo.views}
+          </span>
+          <img className="description__icons--likes" src={likes} alt="" />
+          <span className="description__likes-num">
+            {props.currentVideo.likes}
+          </span>
+        </div>
       </div>
       <div className="description__text-wrapper">
         <p className="description__text-content">
-          On a gusty day in Southern Utah, a group of 25 daring mountain bikers
-          blew the doors off what is possible on two wheels, unleashing some of
-          the biggest moments the sport has ever seen. While mother nature only
-          allowed for one full run before the conditions made it impossible to
-          ride, that was all that was needed for event veteran Kyle Strait, who
-          won the event for the second time -- eight years after his first Red
-          Cow Rampage title
+          {props.currentVideo.description}
         </p>
       </div>
     </>

@@ -118,18 +118,96 @@ body {
   height: 11.5rem;
 }
 
+.video__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(32, 32, 32, 0.5);
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 3rem;
+}
+
+.video__icons--play {
+  background-image: url("../../assets/icons/icon-play.svg");
+  background-position: center;
+  background-size: cover;
+}
+
+.video__icons--screen {
+  background-image: url("../../assets/icons/icon-fullscreen.svg");
+  background-position: center;
+  background-size: cover;
+}
+
+.video__icons--vol {
+  background-image: url("../../assets/icons/icon-volume.svg");
+  background-position: center;
+  background-size: cover;
+}
+
+.description {
+  padding: 2rem 1rem 1.5rem 1rem;
+}
+
+.description__title {
+  font-family: "Avenir Next Bold";
+  font-size: 1.5rem;
+  margin: 0 0 1rem 0;
+}
+
+.description__details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 2rem 0;
+}
+
+.description__details--author {
+  font-family: "Avenir Next Demi Bold";
+  margin: 0 0.5rem 0 0;
+}
+
+.description__details--date {
+  color: #afafaf;
+}
+
+.description__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.description__icons--views, .description__icons--likes {
+  margin: 0 0.5rem 0 0;
+}
+
+.description__icons--num {
+  margin: 0 1.5rem 0 0;
+}
+
+.description__text-wrapper {
+  padding: 1.5rem 0 2.5rem 0;
+  margin: 0 1rem;
+  border-top: 1px solid #afafaf;
+}
+
+.description__text-content {
+  font-size: 0.75rem;
+}
+
 @font-face {
   font-family: "Avenir Next Regular";
-  src: url("/assets/global-font/avenir-next-pro-lt/Linotype - AvenirNextLTPro-Regular.otf");
+  src: url("../../assets/global-font/avenir-next-pro-lt/Linotype - AvenirNextLTPro-Regular.otf");
 }
 
 @font-face {
   font-family: "Avenir Next Demi Bold";
-  src: url("/assets/global-font/avenir-next-pro-lt/Linotype - AvenirNextLTPro-Demi.otf");
+  src: url("../../assets/global-font/avenir-next-pro-lt/Linotype - AvenirNextLTPro-Demi.otf");
 }
 
 @font-face {
   font-family: "Avenir Next Bold";
-  src: url("/assets/global-font/avenir-next-pro-lt/alternative-files/Linotype - Avenir Next LT Pro Bold.ttf");
+  src: url("../../assets/global-font/avenir-next-pro-lt/Linotype - AvenirNextLTPro-Bold.otf");
 }
 /*# sourceMappingURL=main.css.map */

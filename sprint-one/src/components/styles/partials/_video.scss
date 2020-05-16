@@ -6,4 +6,78 @@
   background-size: cover;
   width: 100%;
   height: 11.5rem;
+
+  &__icons {
+    display: flex;
+    background-color: $hero-gradient;
+    justify-content: space-around;
+    height: 3rem;
+
+    &--play {
+      background-image: url("../../assets/icons/icon-play.svg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    &--time {
+    }
+
+    &--screen {
+      background-image: url("../../assets/icons/icon-fullscreen.svg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    &--vol {
+      background-image: url("../../assets/icons/icon-volume.svg");
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}
+
+.description {
+  padding: 2rem 1rem 1.5rem 1rem;
+
+  &__title {
+    font-family: $primary-font-bold;
+    font-size: 1.5rem;
+    margin: 0 0 1rem 0;
+  }
+
+  &__details {
+    display: flex;
+    margin: 0 0 2rem 0;
+
+    &--author {
+      font-family: $primary-font-demi;
+      margin: 0 0.5rem 0 0;
+    }
+    &--date {
+      color: $divider-color;
+    }
+  }
+
+  &__icons {
+    display: flex;
+
+    &--views,
+    &--likes {
+      margin: 0 0.5rem 0 0;
+    }
+
+    &--num {
+      margin: 0 1.5rem 0 0;
+    }
+  }
+
+  &__text-wrapper {
+    padding: 1.5rem 0 2.5rem 0;
+    margin: 0 1rem;
+    border-top: 1px solid $divider-color;
+  }
+
+  &__text-content {
+    font-size: 0.75rem;
+  }
 }

@@ -2,10 +2,10 @@ import React from "react";
 import "./styles/main.css";
 import Video from "./video";
 
-function Main() {
+function Main(props) {
   return (
     <main className="main">
-      <Video />
+      <Video currentVideo={props.currentVideo} />
     </main>
   );
 }
