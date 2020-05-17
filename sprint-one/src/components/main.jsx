@@ -7,7 +7,7 @@ function Main(props) {
   return (
     <main className="main">
       <Video currentVideo={props.currentVideo} />
-      <Comments />
+      <Comments comments={props.comments} />
     </main>
   );
 }

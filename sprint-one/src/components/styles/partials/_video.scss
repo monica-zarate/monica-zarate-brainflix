@@ -15,7 +15,7 @@
     padding: 0 15.5rem;
   }
 
-  &__playing {
+  &__active {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -32,6 +32,10 @@
     @include desktop {
       height: 33.75rem;
     }
+  }
+
+  &__playing {
+    display: none;
   }
 
   &__icons {

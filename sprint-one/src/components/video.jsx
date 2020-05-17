@@ -1,6 +1,5 @@
 import React from "react";
 import "./styles/main.css";
-import play from "../assets/icons/icon-play.svg";
 import views from "../assets/icons/icon-views.svg";
 import likes from "../assets/icons/icon-likes.svg";
 
@@ -8,11 +7,14 @@ function Video(props) {
   return (
     <>
       <div className="video">
-        <div className="video__playing">
+        <div className="video__active">
+          <video className="video__playing"></video>
           <div className="video__icons">
             <button className="video__icons--play"></button>
             <button className="video__icons--time">
-              <span className="video__icons--timer">0:00 / 0:42</span>
+              <span className="video__icons--timer">
+                {props.currentVideo.duration}
+              </span>
             </button>
             <button className="video__icons--screen"></button>
             <button className="video__icons--vol"></button>
@@ -23,7 +25,7 @@ function Video(props) {
         <h1 className="description__title">{props.currentVideo.title}</h1>
         <div className="description__details">
           <p className="description__details--author">
-            {props.currentVideo.user}
+            {props.currentVideo.channel}
           </p>
           <p className="description__details--date">
             {props.currentVideo.timestamp}

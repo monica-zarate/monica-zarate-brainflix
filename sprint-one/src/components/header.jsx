@@ -1,7 +1,6 @@
 import React from "react";
 import "./styles/main.css";
 import logo from "../assets/logo/logo-brainflix.svg";
-import search from "../assets/icons/icon-search.svg";
 import user from "../assets/images/usericon.png";
 
 function Header() {
