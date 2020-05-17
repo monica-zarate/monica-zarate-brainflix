@@ -36,3 +36,18 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+// Main Container
+
+.content {
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    max-width: 90rem;
+    margin: 0 auto;
+
+    &__wrapper {
+      width: 55.75rem;
+    }
+  }
+}

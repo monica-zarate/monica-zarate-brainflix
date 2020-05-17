@@ -32,13 +32,13 @@
   &__input {
     background-image: url("../../assets/icons/icon-search.svg");
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: 1rem;
     height: 3rem;
     width: 100%;
     border-radius: 4px;
     border-style: none;
     border: 1px solid $bg-primary-color;
-    padding: 1rem;
+    padding: 0 2.5rem;
     outline: none;
 
     &:focus {

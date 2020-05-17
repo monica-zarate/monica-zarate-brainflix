@@ -1,6 +1,5 @@
 import React from "react";
 import "./components/styles/main.css";
-// import "./App.css";
 import Header from "./components/header";
 import Main from "./components/main";
 
@@ -40,6 +39,56 @@ class App extends React.Component {
           "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He's definitely my favorite ever!",
       },
     ],
+    queue: [
+      {
+        id: 1,
+        title: "Become A Travel Pro In One Easy Lesson",
+        channel: "Todd Welch",
+        image: "/queue-imgs/video-list-1.jpg",
+      },
+      {
+        id: 2,
+        title: "Les Houches The Hidden Gem Of The Chamonix",
+        channel: "Cornelia Blair",
+        image: "/queue-imgs/video-list-2.jpg",
+      },
+      {
+        id: 3,
+        title: "Travel Health Useful Medical Information For",
+        channel: "Glen Harper",
+        image: "/queue-imgs/video-list-3.jpg",
+      },
+      {
+        id: 4,
+        title: "Cheap Airline Tickets Great Ways To Save",
+        channel: "Emily Harper",
+        image: "/queue-imgs/video-list-4.jpg",
+      },
+      {
+        id: 5,
+        title: "Take A Romantic Break In A Boutique Hotel",
+        channel: "Ethan Owen",
+        image: "/queue-imgs/video-list-5.jpg",
+      },
+      {
+        id: 6,
+        title: "Choose The Perfect Accommodations",
+        channel: "Lydia Perez",
+        image: "/queue-imgs/video-list-6.jpg",
+      },
+      {
+        id: 7,
+        title: "Cruising Destination Ideas",
+        channel: "Timothy Austin",
+        image: "/queue-imgs/video-list-7.jpg",
+      },
+      {
+        id: 8,
+        title: "Train Travel On Track For Safety",
+        channel: "Scotty Cranmer",
+        image: "/queue-imgs/video-list-8.jpg",
+      },
+    ],
   };
 
   render() {
@@ -49,6 +98,7 @@ class App extends React.Component {
         <Main
           currentVideo={this.state.currentVideo}
           comments={this.state.comments}
+          queue={this.state.queue}
         />
       </div>
     );
