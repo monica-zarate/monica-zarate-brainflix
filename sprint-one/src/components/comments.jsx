@@ -16,13 +16,12 @@ function Comments(props) {
             alt="user-icon"
           />
 
-          <input
+          <textarea
             className="form__wrapper--input"
-            type="text"
+            name="input"
             placeholder="Add a comment here"
-            name=""
-            id=""
-          />
+          ></textarea>
+
           <button className="form__wrapper--btn">COMMENT</button>
         </div>
       </div>

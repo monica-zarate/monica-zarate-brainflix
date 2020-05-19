@@ -42,7 +42,7 @@
     outline: none;
 
     &:focus {
-      border: 2px solid $primary-btn;
+      border: 1px solid $primary-btn;
     }
 
     @include tablet {
