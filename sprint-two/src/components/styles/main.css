@@ -887,7 +887,8 @@ body {
 
 @media (min-width: 768px) {
   .upload {
-    padding: 3rem 1.5rem;
+    padding: 0 0 3rem 0;
+    border-top: 1px solid #afafaf;
   }
 }
 
@@ -905,8 +906,24 @@ body {
   font-size: 1.5rem;
 }
 
+@media (min-width: 768px) {
+  .upload__title {
+    padding: 3rem 0 2rem 0;
+    border-top: unset;
+    border-bottom: 1px solid #afafaf;
+    margin: 0 1.5rem;
+  }
+}
+
 .upload__thumb {
   font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  .upload__thumb {
+    padding: 2.5rem 0;
+    margin: 0 1.5rem;
+  }
 }
 
 .upload__thumb--title {
@@ -922,9 +939,24 @@ body {
   margin: 0 0 2rem 0;
 }
 
+@media (min-width: 768px) {
+  .upload__thumb--img {
+    margin: 0;
+  }
+}
+
 .upload__form {
   margin: 0 0 0.5rem 0;
   max-width: 18rem;
+}
+
+@media (min-width: 768px) {
+  .upload__form {
+    margin: 0 1.5rem;
+    max-width: 48rem;
+    padding: 0 0 1rem 0;
+    border-bottom: 1px solid #afafaf;
+  }
 }
 
 .upload__form--title {
@@ -964,10 +996,34 @@ body {
   max-width: 18rem;
 }
 
+@media (min-width: 768px) {
+  .upload__btns {
+    margin: 2.5rem 1.5rem;
+    max-width: 48rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
 .upload__btns--cancel {
   color: #0095ff;
   font-family: "Avenir Next Demi Bold";
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .upload__btns--cancel {
+    margin: 0 3rem 0 0;
+    font-size: 0.85rem;
+  }
 }
 
 .upload__btns--publish {
@@ -984,6 +1040,13 @@ body {
   outline: none;
   height: 3rem;
   margin: 0 0 1.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .upload__btns--publish {
+    max-width: 10rem;
+    padding: 0.5rem 1rem;
+  }
 }
 
 .upload__btns--publish:hover {

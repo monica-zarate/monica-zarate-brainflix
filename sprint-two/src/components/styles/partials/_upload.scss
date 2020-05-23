@@ -2,7 +2,8 @@
   padding: 0 1rem 2rem 1rem;
 
   @include tablet {
-    padding: 3rem 1.5rem;
+    padding: 0 0 3rem 0;
+    border-top: 1px solid $divider-color;
   }
 
   @include desktop {
@@ -15,10 +16,21 @@
     border-top: 1px solid $divider-color;
     padding: 1.5rem 0 2rem 0;
     font-size: 1.5rem;
+    @include tablet {
+      padding: 3rem 0 2rem 0;
+      border-top: unset;
+      border-bottom: 1px solid $divider-color;
+      margin: 0 1.5rem;
+    }
   }
 
   &__thumb {
     font-size: 0.8rem;
+
+    @include tablet {
+      padding: 2.5rem 0;
+      margin: 0 1.5rem;
+    }
     &--title {
       font-family: $primary-font-demi;
       color: $divider-color;
@@ -29,12 +41,22 @@
       height: 9.5rem;
       border-radius: 4px;
       margin: 0 0 2rem 0;
+
+      @include tablet {
+        margin: 0;
+      }
     }
   }
 
   &__form {
     margin: 0 0 0.5rem 0;
     max-width: 18rem;
+    @include tablet {
+      margin: 0 1.5rem;
+      max-width: 48rem;
+      padding: 0 0 1rem 0;
+      border-bottom: 1px solid $divider-color;
+    }
     &--title {
       font-family: $primary-font-demi;
       color: $divider-color;
@@ -67,10 +89,22 @@
     flex-direction: column-reverse;
     max-width: 18rem;
 
+    @include tablet {
+      margin: 2.5rem 1.5rem;
+      max-width: 48rem;
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: flex-end;
+    }
+
     &--cancel {
       color: $primary-btn;
       font-family: $primary-font-demi;
       margin: 0 auto;
+      @include tablet {
+        margin: 0 3rem 0 0;
+        font-size: 0.85rem;
+      }
     }
     &--publish {
       color: $secondary-color;
@@ -86,6 +120,11 @@
       outline: none;
       height: 3rem;
       margin: 0 0 1.5rem 0;
+
+      @include tablet {
+        max-width: 10rem;
+        padding: 0.5rem 1rem;
+      }
 
       &:hover {
         background-color: $primary-btn-hover;
