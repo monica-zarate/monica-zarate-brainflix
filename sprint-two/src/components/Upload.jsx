@@ -9,7 +9,7 @@ function Upload(props) {
 
       <div className="upload__thumb">
         <p className="upload__thumb--title">VIDEO THUMBNAIL</p>
-        <img className="upload__thumb-img" src={thumbnail} alt="bike" />
+        <img className="upload__thumb--img" src={thumbnail} alt="bike" />
       </div>
       <div className="upload__form">
         <p className="upload__form--title">TITLE YOUR VIDEO</p>

@@ -1,0 +1,99 @@
+.upload {
+  padding: 0 1rem 2rem 1rem;
+
+  @include tablet {
+    padding: 3rem 1.5rem;
+  }
+
+  @include desktop {
+    padding: 3rem 11.25rem;
+  }
+
+  &__title {
+    font-family: $primary-font-bold;
+    color: $primary-color;
+    border-top: 1px solid $divider-color;
+    padding: 1.5rem 0 2rem 0;
+    font-size: 1.5rem;
+  }
+
+  &__thumb {
+    font-size: 0.8rem;
+    &--title {
+      font-family: $primary-font-demi;
+      color: $divider-color;
+      margin: 0 0 0.5rem 0;
+    }
+    &--img {
+      width: 18rem;
+      height: 9.5rem;
+      border-radius: 4px;
+      margin: 0 0 2rem 0;
+    }
+  }
+
+  &__form {
+    margin: 0 0 0.5rem 0;
+    max-width: 18rem;
+    &--title {
+      font-family: $primary-font-demi;
+      color: $divider-color;
+      margin: 0 0 0.5rem 0;
+      font-size: 0.8rem;
+    }
+
+    &--input,
+    &--text {
+      width: 100%;
+      border-radius: 4px;
+      margin: 0 0 1.5rem 0;
+      border-style: none;
+      border: 2px solid $bg-primary-color;
+      padding: 0.5rem;
+      outline: none;
+      &:focus {
+        border: 2px solid $primary-btn;
+      }
+    }
+
+    &--text {
+      resize: none;
+      height: 9rem;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    flex-direction: column-reverse;
+    max-width: 18rem;
+
+    &--cancel {
+      color: $primary-btn;
+      font-family: $primary-font-demi;
+      margin: 0 auto;
+    }
+    &--publish {
+      color: $secondary-color;
+      background-color: $primary-btn;
+      font-family: $primary-font-demi;
+      padding: 0.5rem 4rem;
+      cursor: pointer;
+      font-size: 1rem;
+      border-radius: 4px;
+      border: 1px solid $secondary-color;
+      max-width: 18rem;
+      width: 100%;
+      outline: none;
+      height: 3rem;
+      margin: 0 0 1.5rem 0;
+
+      &:hover {
+        background-color: $primary-btn-hover;
+      }
+
+      &:active {
+        background-color: $primary-btn-hover;
+      }
+    }
+  }
+}
