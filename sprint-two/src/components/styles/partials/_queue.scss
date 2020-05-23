@@ -3,6 +3,10 @@
 .queue {
   padding: 2.5rem 1rem;
 
+  @include tablet {
+    padding: 2.5rem 1.5rem;
+  }
+
   @include desktop {
     width: 24rem;
     padding: 2.5rem 0 0 1.5rem;
