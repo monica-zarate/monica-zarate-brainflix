@@ -1,19 +1,19 @@
 .upload {
   padding: 0 1rem 2rem 1rem;
+  border-top: 1px solid $divider-color;
 
   @include tablet {
     padding: 0 0 3rem 0;
-    border-top: 1px solid $divider-color;
   }
 
   @include desktop {
     padding: 3rem 11.25rem;
+    margin: 0 auto;
   }
 
   &__title {
     font-family: $primary-font-bold;
     color: $primary-color;
-    border-top: 1px solid $divider-color;
     padding: 1.5rem 0 2rem 0;
     font-size: 1.5rem;
     @include tablet {
@@ -21,6 +21,25 @@
       border-top: unset;
       border-bottom: 1px solid $divider-color;
       margin: 0 1.5rem;
+    }
+    @include desktop {
+      padding: 0 0 2rem 0;
+      margin: 0;
+      max-width: 67.5rem;
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    @include tablet {
+      border-bottom: 1px solid $divider-color;
+    }
+
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      max-width: 67.5rem;
     }
   }
 
@@ -31,6 +50,12 @@
       padding: 2.5rem 0;
       margin: 0 1.5rem;
     }
+    @include desktop {
+      max-width: unset;
+      width: 25%;
+      margin: 0;
+    }
+
     &--title {
       font-family: $primary-font-demi;
       color: $divider-color;
@@ -51,12 +76,18 @@
   &__form {
     margin: 0 0 0.5rem 0;
     max-width: 18rem;
+
     @include tablet {
       margin: 0 1.5rem;
       max-width: 48rem;
       padding: 0 0 1rem 0;
-      border-bottom: 1px solid $divider-color;
     }
+    @include desktop {
+      max-width: unset;
+      width: 70%;
+      margin: 0;
+    }
+
     &--title {
       font-family: $primary-font-demi;
       color: $divider-color;
@@ -95,6 +126,11 @@
       flex-direction: row;
       align-items: baseline;
       justify-content: flex-end;
+    }
+
+    @include desktop {
+      max-width: 67.5rem;
+      margin: 2.5rem 0;
     }
 
     &--cancel {

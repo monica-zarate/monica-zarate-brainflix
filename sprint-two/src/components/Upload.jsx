@@ -6,23 +6,25 @@ function Upload(props) {
   return (
     <div className="upload">
       <h1 className="upload__title">Upload Video</h1>
+      <div className="upload__wrapper">
+        <div className="upload__thumb">
+          <p className="upload__thumb--title">VIDEO THUMBNAIL</p>
+          <img className="upload__thumb--img" src={thumbnail} alt="bike" />
+        </div>
 
-      <div className="upload__thumb">
-        <p className="upload__thumb--title">VIDEO THUMBNAIL</p>
-        <img className="upload__thumb--img" src={thumbnail} alt="bike" />
-      </div>
-      <div className="upload__form">
-        <p className="upload__form--title">TITLE YOUR VIDEO</p>
-        <input
-          className="upload__form--input"
-          type="text"
-          placeholder="Add a title to your video"
-        />
-        <p className="upload__form--title">ADD A DESCRIPTION</p>
-        <textarea
-          className="upload__form--text"
-          placeholder="Add a description of your video"
-        ></textarea>
+        <div className="upload__form">
+          <p className="upload__form--title">TITLE YOUR VIDEO</p>
+          <input
+            className="upload__form--input"
+            type="text"
+            placeholder="Add a title to your video"
+          />
+          <p className="upload__form--title">ADD A DESCRIPTION</p>
+          <textarea
+            className="upload__form--text"
+            placeholder="Add a description of your video"
+          ></textarea>
+        </div>
       </div>
       <div className="upload__btns">
         <p className="upload__btns--cancel">CANCEL</p>
