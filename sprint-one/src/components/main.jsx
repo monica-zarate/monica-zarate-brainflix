@@ -1,9 +1,10 @@
 import React from "react";
 import "./styles/main.css";
-import Video from "./video";
-import Comments from "./comments";
-import Queue from "./queue";
-import Description from "./video-description";
+import Video from "./Video";
+import Comments from "./Comments";
+import Queue from "./Queue";
+import Description from "./Video-description";
+import Upload from "./Upload";
 
 function Main(props) {
   return (
@@ -17,6 +18,7 @@ function Main(props) {
           <Comments comments={props.comments} />
         </div>
         <Queue queue={props.queue} />
+        <Upload />
       </body>
     </>
   );
