@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <header className="header">
-      <Link to={`/`}>
-        <img className="header__logo" src={logo} alt="BrainFlix Logo" />
+      <Link to={`/`} className="header__logo">
+        <img src={logo} alt="BrainFlix Logo" />
       </Link>
       <input
         className="header__input"
@@ -19,7 +19,7 @@ function Header() {
         id=""
       />
       <nav className="header__nav">
-        <Link to={`/upload`}>
+        <Link to={`/upload`} className="header__btn-link">
           <button className="header__btn">+ UPLOAD</button>
         </Link>
         <img className="header__user-icon" src={user} alt="" />

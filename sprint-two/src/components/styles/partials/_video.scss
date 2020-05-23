@@ -36,7 +36,7 @@
   &__icons {
     padding: 0 1rem 0.5rem 1rem;
     width: 100%;
-    max-width: 67.5rem;
+    max-width: 20rem;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -44,10 +44,12 @@
     top: -65px;
 
     @include tablet {
+      max-width: 44rem;
       padding: 0 0.5rem 1rem 0.5rem;
     }
 
     @include desktop {
+      max-width: 67.5rem;
       padding: 0 1rem 1rem 1rem;
     }
 
@@ -236,6 +238,7 @@
 
   &__text-content {
     font-size: 0.75rem;
+    line-height: 1.125rem;
 
     @include tablet {
       width: 75%;

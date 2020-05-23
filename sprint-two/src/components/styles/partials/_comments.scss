@@ -3,10 +3,11 @@
 // Comments Input
 
 .form {
-  padding: 0 1rem 0 1rem;
+  margin: 0 1rem 0 1rem;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  border-bottom: 1px solid $divider-color;
 
   @include tablet {
     padding: 0 1.5rem 0 1.5rem;
@@ -29,7 +30,7 @@
     font-size: 0.5rem;
     color: $divider-color;
     font-family: $primary-font-demi;
-    margin: 0 0 0.5rem 4rem;
+    margin: 0 0 0.5rem 3.5rem;
 
     @include tablet {
       font-size: 0.75rem;
@@ -40,9 +41,10 @@
     width: 100%;
     @extend .flex-center;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: flex-start;
-    border-bottom: 1px solid $divider-color;
+    max-width: 20rem;
+
     padding: 0 0 1.5rem;
 
     @include tablet {
@@ -103,7 +105,7 @@
       width: 81%;
       outline: none;
       height: 3rem;
-      margin: 0 0 0 3.5rem;
+      margin: 0 0 0 3rem;
 
       &:hover {
         background-color: $primary-btn-hover;
@@ -188,6 +190,7 @@
     }
 
     &--text {
+      line-height: 1.125rem;
       @include desktop {
         font-size: 0.76rem;
       }
