@@ -1,0 +1,266 @@
+// Video Section
+
+// Currently Playing Video
+
+.video {
+  background-color: $btn-hover;
+
+  @include tablet {
+    height: 25rem;
+    padding: 0 2rem;
+  }
+
+  @include desktop {
+    height: 33.75rem;
+    padding: 0 15.5rem;
+  }
+
+  &__active {
+    width: 100%;
+    height: 11.5rem;
+
+    @include tablet {
+      height: 25rem;
+    }
+
+    @include desktop {
+      height: 100%;
+    }
+  }
+
+  &__playing {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__icons {
+    padding: 0 1rem 0.5rem 1rem;
+    width: 100%;
+    max-width: 20rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -65px;
+
+    @include tablet {
+      max-width: 44rem;
+      padding: 0 0.5rem 1rem 0.5rem;
+    }
+
+    @include desktop {
+      max-width: 67.5rem;
+      padding: 0 1rem 1rem 1rem;
+    }
+
+    &--play,
+    &--time,
+    &--screen,
+    &--vol {
+      background-color: $hero-gradient;
+      border: none;
+      height: 2.5rem;
+      border-radius: 4px;
+    }
+
+    &--play {
+      background-image: url("../../assets/icons/icon-play.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 4rem;
+      margin: 0 0.5rem 0 0;
+
+      @include tablet {
+        margin: 0 1rem 0 0;
+        width: 5rem;
+      }
+    }
+
+    &--time {
+      width: 44%;
+      margin: 0 0.5rem 0 0;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        border-top: 2.5px groove $btn-hover;
+        border-bottom: 2.5px groove $btn-hover;
+        border-radius: 4px;
+        top: 1.1rem;
+        left: 1rem;
+        width: 75%;
+        content: "";
+
+        @include tablet {
+          width: 83%;
+        }
+
+        @include desktop {
+          width: 88%;
+        }
+      }
+
+      @include tablet {
+        width: 100%;
+        margin: 0 1rem 0 0;
+      }
+    }
+
+    &--timer {
+      display: none;
+
+      @include tablet {
+        display: inline;
+        position: absolute;
+        color: $secondary-color;
+        font-size: 0.5rem;
+        top: 0.75rem;
+        right: 1rem;
+      }
+    }
+
+    &--screen {
+      background-image: url("../../assets/icons/icon-fullscreen.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 2.5rem;
+      border-radius: 4px 0 0 4px;
+
+      @include tablet {
+        width: 3.5rem;
+      }
+    }
+
+    &--vol {
+      background-image: url("../../assets/icons/icon-volume.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 2.5rem;
+      border-radius: 0 4px 4px 0;
+
+      @include tablet {
+        width: 3.5rem;
+      }
+    }
+    outline: none;
+  }
+}
+
+// Video Description
+
+.description {
+  padding: 2rem 1rem 1.5rem 1rem;
+
+  @include tablet {
+    padding: 3rem 1.5rem 1.5rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+
+  @include desktop {
+    padding: 2.5rem 2rem 1.5rem 0;
+    margin: 0 0 0 11.25rem;
+    width: 44.5rem;
+  }
+
+  &__title {
+    font-family: $primary-font-bold;
+    font-size: 1.5rem;
+    margin: 0 0 1rem 0;
+
+    @include tablet {
+      font-size: 2.25rem;
+      margin: 0 0 1.5rem 0;
+    }
+
+    @include desktop {
+    }
+  }
+
+  &__details-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include tablet {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__details {
+    display: flex;
+    margin: 0 0 2rem 0;
+
+    @include tablet {
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    &--author {
+      font-family: $primary-font-demi;
+      margin: 0 0.5rem 0 0;
+    }
+    &--date {
+      color: $divider-color;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    align-items: flex-start;
+
+    @include tablet {
+      font-size: 0.75rem;
+    }
+
+    @include desktop {
+      font-size: 1rem;
+    }
+
+    &--views,
+    &--likes {
+      margin: 0 0.5rem 0 0;
+    }
+
+    &--num {
+      margin: 0 1.5rem 0 0;
+    }
+  }
+
+  &__text-wrapper {
+    padding: 1.5rem 0 2.5rem 0;
+    margin: 0 1rem;
+    border-top: 1px solid $divider-color;
+
+    @include tablet {
+      padding: 2.5rem 0 4rem 0;
+      margin: 0 1.5rem;
+      max-width: 48rem;
+    }
+
+    @include desktop {
+      padding: 2.5rem 0;
+      margin: 0 11.25rem;
+      width: 44.5rem;
+    }
+  }
+
+  &__text-content {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+
+    @include tablet {
+      width: 75%;
+      font-size: 0.92rem;
+      line-height: 1.375rem;
+    }
+
+    @include desktop {
+      width: 78%;
+    }
+  }
+}
