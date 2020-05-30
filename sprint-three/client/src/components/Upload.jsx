@@ -1,8 +1,30 @@
 import React from "react";
 import "./styles/main.css";
 import thumbnail from "../assets/images/upload-video-preview.jpg";
+import Axios from "axios";
 
 function Upload(props) {
+  let clickHandler = (event) => {
+    const videosApi = "http://localhost:5000/videos/";
+    let titleInput = document.getElementsByClassName("upload__form--input")[0];
+    let title = titleInput.value;
+    let descriptionInput = document.getElementsByClassName(
+      "upload__form--text"
+    )[0];
+    let description = descriptionInput.value;
+    let newVideo = {
+      title: title,
+      description: description,
+    };
+    Axios.post(videosApi, newVideo)
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.log("Error");
+      });
+  };
+
   return (
     <div className="upload">
       <h1 className="upload__title">Upload Video</h1>
@@ -28,7 +50,9 @@ function Upload(props) {
       </div>
       <div className="upload__btns">
         <p className="upload__btns--cancel">CANCEL</p>
-        <button className="upload__btns--publish">PUBLISH</button>
+        <button onClick={clickHandler} className="upload__btns--publish">
+          PUBLISH
+        </button>
       </div>
     </div>
   );
