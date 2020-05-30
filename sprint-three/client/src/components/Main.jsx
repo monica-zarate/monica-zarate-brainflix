@@ -21,6 +21,9 @@ class Main extends React.Component {
 
   // Calling API to retrieve data for Main Video and Video Queue then assigning data to State.
   getVideo(videoId) {
+    if (videoId === undefined) {
+      videoId = "1af0jruup5gu";
+    }
     Axios.get(`${videosApi}${videoId}`)
       .then((response) => {
         this.setState({ currentVideo: response.data });
@@ -49,7 +52,7 @@ class Main extends React.Component {
   // If Else Function that prevents infinite calls to the API by comparing the previous Id with the new Id, if it's the same there won't be another API call.
   componentDidUpdate(prevProps) {
     const oldVideoId = prevProps.match.params.id;
-    const newVideoId = this.props.match.params.id;
+    let newVideoId = this.props.match.params.id;
     if (newVideoId === oldVideoId) {
       console.log("same video Id");
     } else {

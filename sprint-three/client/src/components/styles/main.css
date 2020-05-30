@@ -116,6 +116,7 @@ body {
   border: 2px solid #e1e1e1;
   padding: 0 2.5rem;
   outline: none;
+  max-width: 18rem;
 }
 
 .header__input:focus {

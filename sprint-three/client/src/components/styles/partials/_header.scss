@@ -47,6 +47,7 @@
     border: 2px solid $bg-primary-color;
     padding: 0 2.5rem;
     outline: none;
+    max-width: 18rem;
 
     &:focus {
       border: 2px solid $primary-btn;
