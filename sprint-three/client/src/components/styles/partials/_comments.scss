@@ -29,6 +29,10 @@
     @include tablet {
       margin: 0 1.5rem;
     }
+
+    @include desktop {
+      margin: 0 1.5rem 2rem 1.5rem;
+    }
   }
 
   &__title {
@@ -61,7 +65,8 @@
     }
 
     @include desktop {
-      padding: 0;
+      padding: 0 2.5 0 0;
+      width: 44.5rem;
     }
 
     &--user-icon {

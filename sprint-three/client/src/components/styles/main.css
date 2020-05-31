@@ -522,7 +522,7 @@ body {
 
 @media (min-width: 1440px) {
   .description__text-wrapper {
-    padding: 2.5rem 0;
+    padding: 0;
     margin: 0 11.25rem;
     width: 44.5rem;
   }
@@ -547,7 +547,9 @@ body {
 
 @media (min-width: 1440px) {
   .description__text-content {
-    width: 78%;
+    width: 100%;
+    margin: 0;
+    padding: 1.5rem 11.25rem 2.5rem 0;
   }
 }
 
@@ -589,6 +591,12 @@ body {
 @media (min-width: 768px) {
   .form__comments-num {
     margin: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .form__comments-num {
+    margin: 0 1.5rem 2rem 1.5rem;
   }
 }
 
@@ -635,7 +643,8 @@ body {
 
 @media (min-width: 1440px) {
   .form__wrapper {
-    padding: 0;
+    padding: 0 2.5 0 0;
+    width: 44.5rem;
   }
 }
 

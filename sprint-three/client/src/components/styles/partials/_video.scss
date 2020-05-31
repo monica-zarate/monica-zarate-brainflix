@@ -244,7 +244,7 @@
     }
 
     @include desktop {
-      padding: 2.5rem 0;
+      padding: 0;
       margin: 0 11.25rem;
       width: 44.5rem;
     }
@@ -265,7 +265,9 @@
     }
 
     @include desktop {
-      width: 78%;
+      width: 100%;
+      margin: 0;
+      padding: 1.5rem 11.25rem 2.5rem 0;
     }
   }
 }

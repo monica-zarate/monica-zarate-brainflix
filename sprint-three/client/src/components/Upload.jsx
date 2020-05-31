@@ -19,6 +19,8 @@ function Upload(props) {
     Axios.post(videosApi, newVideo)
       .then((response) => {
         console.log(response.data);
+        titleInput.value = "";
+        descriptionInput.value = "";
       })
       .catch((error) => {
         console.log("Error");
