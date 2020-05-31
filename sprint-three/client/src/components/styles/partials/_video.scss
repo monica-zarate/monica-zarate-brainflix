@@ -150,6 +150,8 @@
 
 .description {
   padding: 2rem 1rem 1.5rem 1rem;
+  max-width: 20rem;
+  margin: 0 auto;
 
   @include tablet {
     padding: 3rem 1.5rem 1.5rem 1.5rem;
@@ -232,13 +234,12 @@
   }
 
   &__text-wrapper {
-    padding: 1.5rem 0 2.5rem 0;
-    margin: 0 1rem;
-    border-top: 1px solid $divider-color;
+    margin: 0 auto;
+    max-width: 20rem;
 
     @include tablet {
       padding: 2.5rem 0 4rem 0;
-      margin: 0 1.5rem;
+      margin: 0 auto;
       max-width: 48rem;
     }
 
@@ -250,6 +251,9 @@
   }
 
   &__text-content {
+    padding: 1.5rem 0 2.5rem 0;
+    margin: 0 1rem;
+    border-top: 1px solid $divider-color;
     font-size: 0.75rem;
     line-height: 1.125rem;
 
@@ -257,6 +261,7 @@
       width: 75%;
       font-size: 0.92rem;
       line-height: 1.375rem;
+      margin: 0 1.5rem;
     }
 
     @include desktop {

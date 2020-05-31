@@ -2,9 +2,11 @@
 
 .queue {
   padding: 2.5rem 1rem;
+  margin: 0 auto;
+  max-width: 20rem;
 
   @include tablet {
-    padding: 2.5rem 1.5rem;
+    max-width: 48rem;
   }
 
   @include desktop {
